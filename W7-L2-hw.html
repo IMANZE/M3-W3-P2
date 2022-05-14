@@ -230,12 +230,13 @@
             <div class="row">
                 <div class="container">
                 
-          <table class="table table-striped table-dark text-light">
+          <table class="table table-striped table-dark text-light" id="track">
             <thead>
                 <tr>
                 <th scope="col">Title</th>
                 <th scope="col">Artist Name</th>
                 <th scope="col">Duration</th>
+                <th scope="col">Delete</th>
               </tr>
             </thead>
             <tbody>
@@ -243,83 +244,98 @@
                 <td>Intro-Lude 8701</td>
                 <td>Usher</td>
                 <td>0:44</td>
+                <td><button onclick="removeRow(this)"  type="button" class="btn btn-danger">Delete</button></td>
               </tr>
               <tr>
                 <td>U Remind Me</td>
                 <td>Usher</td>
                 <td>4:26</td>
+                <td><button onclick="removeRow(this)" type="button" class="btn btn-danger">Delete</button></td>
               </tr>
               <tr>
                 <td>I Don't Know" (featuring P. Diddy)</td>
                 <td>Usher</td>
                 <td>4:26</td>
+                <td><button onclick="removeRow(this)" type="button" class="btn btn-danger">Delete</button></td>
               </tr>
               <tr>
                 <td>Twork It Out</td>
                 <td>Usher</td>
                 <td>4:42</td>
+                <td><button onclick="removeRow(this)" type="button" class="btn btn-danger">Delete</button></td>
               </tr>
               <tr>
                 <td>U Got It Bad</td>
                 <td>Usher</td>
                 <td>4:07</td>
+                <td><button onclick="removeRow(this)" type="button" class="btn btn-danger">Delete</button></td>
               </tr>
               <tr>
                 <td>If I Want To</td>
                 <td>Usher</td>
                 <td>3:46</td>
+                <td><button onclick="removeRow(this)" type="button" class="btn btn-danger">Delete</button></td>
               </tr>
-              <tr>
+              <tr id="1">
                 <td>I Can't Let U Go</td>
                 <td>Usher</td>
                 <td>3:28</td>
+                <td><button onclick="removeRow(this)" type="button" class="btn btn-danger">Delete</button></td>
               </tr>
               <tr>
                 <td>U Don't Have to Call</td>
                 <td>Usher</td>
                 <td>4:29</td>
+                <td><button onclick="removeRow(this)" type="button" class="btn btn-danger">Delete</button></td>
               </tr>
               <tr>
                 <td>Without U (Interlude)</td>
                 <td>Usher</td>
                 <td>0:53</td>
+                <td><button onclick="removeRow(this)" type="button" class="btn btn-danger">Delete</button></td>
               </tr>
               <tr>
                 <td>Can U Help Me</td>
                 <td>Usher</td>
                 <td>5:35</td>
+                <td><button onclick="removeRow(this)" type="button" class="btn btn-danger">Delete</button></td>
               </tr>
               <tr>
                 <td>How Do I Say</td>
                 <td>Usher</td>
                 <td>5:39</td>
+                <td><button onclick="removeRow(this)" type="button" class="btn btn-danger">Delete</button></td>
               </tr>
               <tr>
                 <td>Hottest Thing</td>
                 <td>Usher</td>
                 <td>3:49</td>
+                <td><button onclick="removeRow(this)" type="button" class="btn btn-danger">Delete</button></td>
               </tr>
               <tr>
                 <td>Good Ol' Ghetto</td>
                 <td>Usher</td>
                 <td>4:00</td>
+                <td><button onclick="removeRow(this)" type="button" class="btn btn-danger">Delete</button></td>
               </tr>
               <tr>
                 <td>U-Turn</td>
                 <td>Usher</td>
                 <td>3:09</td>
+                <td><button onclick="removeRow(this)" type="button" class="btn btn-danger">Delete</button></td>
               </tr>
               <tr>
                 <td>U R the One</td>
                 <td>Usher</td>
                 <td>3:56</td>
+                <td><button onclick="removeRow(this)" type="button" class="btn btn-danger">Delete</button></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-    </div>
-    </section>
+      </div>
+     </section>
     <section id="best-album-ever">
         <div class="container py-5">
             <div class="row">
@@ -507,7 +523,11 @@
 
             document.querySelector("footer").appendChild(span)
         }
-
+        
+        function removeRow(e) {
+          var parent = e.parentNode.parentNode.rowIndex;
+          const tel = document.getElementById("track").deleteRow(parent);
+        }
 
     </script>
 
