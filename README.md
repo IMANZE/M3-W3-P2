@@ -61,3 +61,5 @@ CSS EXTRA
 
 Create a fade-in effect for the jumbotron of EX 1, the effect should happen upon loading the page. Figure out a way with JavaScript to make it happen.
 For the delete buttons you've created on EX 5 make only one visible at a time, the delete button should become visible only when its row gets hovered. Animate it with a fade-in effect upon the user hovering and fade-out when he/she goes away from it.
+
+See final image attached for pictorial view of project
